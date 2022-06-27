@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class CalendarTextStyles {
+class CalendarTextStyles {
   static const TextStyle fSize15White = TextStyle(
     fontSize: 15,
     color: Colors.white,

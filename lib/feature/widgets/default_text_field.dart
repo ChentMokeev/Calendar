@@ -1,14 +1,16 @@
-part of '../auth_screen.dart';
+part of '../authorization/presentation/pages/auth_screen/auth_screen.dart';
 
 class DefaultTextField extends StatelessWidget {
   const DefaultTextField({
     Key? key,
     required this.label,
+    required this.controller,
     this.hideText = false,
   }) : super(key: key);
 
   final String label;
   final bool hideText;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,7 @@ class DefaultTextField extends StatelessWidget {
         SizedBox(
           height: 40,
           child: TextField(
+            controller: controller,
             obscureText: hideText,
             decoration: const InputDecoration(
               border: OutlineInputBorder(),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'feature/presentation/screens/auth_screen/auth_screen.dart';
+import 'feature/authorization/presentation/pages/auth_screen/auth_screen.dart';
 
 void main() {
   runApp(const MyApp());

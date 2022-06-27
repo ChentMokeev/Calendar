@@ -1,4 +1,4 @@
-part of '../auth_screen.dart';
+part of '../authorization/presentation/pages/auth_screen/auth_screen.dart';
 
 class RegistrationForm extends StatelessWidget {
   const RegistrationForm({
@@ -21,11 +21,11 @@ class RegistrationForm extends StatelessWidget {
             style: CalendarTextStyles.fSize14Weight400Blue,
           ),
         ),
-        const DefaultTextField(label: 'ФИО'),
-        const DefaultTextField(label: 'Отдел'),
-        const DefaultTextField(label: 'Должность'),
-        const DefaultTextField(label: 'Почта'),
-        const DefaultTextField(label: 'Пароль'),
+        // const DefaultTextField(label: 'ФИО'),
+        // const DefaultTextField(label: 'Отдел'),
+        // const DefaultTextField(label: 'Должность'),
+        // const DefaultTextField(label: 'Почта'),
+        // const DefaultTextField(label: 'Пароль'),
         const SizedBox(height: 16),
         const SizedBox(
           height: 48,
