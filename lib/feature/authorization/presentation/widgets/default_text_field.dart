@@ -1,4 +1,4 @@
-part of '../authorization/presentation/pages/auth_screen/auth_screen.dart';
+part of '../pages/auth_screen/auth_screen.dart';
 
 class DefaultTextField extends StatelessWidget {
   const DefaultTextField({
