@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'feature/authorization/presentation/pages/auth_screen/auth_screen.dart';
+import 'feature/calendar/presentation/pages/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Calendar',
-      home: AuthScreen(),
+      home: MainScreen(),
     );
   }
 }

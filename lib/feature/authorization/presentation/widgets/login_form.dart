@@ -60,7 +60,7 @@ class LoginForm extends StatelessWidget {
               child: Text(
                 'Регистрация',
                 style: CalendarTextStyles.fSize14Weight300Gray
-                    .copyWith(color: CalendarColors.bgBlue),
+                    .copyWith(color: CalendarColors.authBgBlue),
               ),
             ),
           ],

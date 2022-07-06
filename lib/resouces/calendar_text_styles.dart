@@ -20,7 +20,7 @@ class CalendarTextStyles {
     fontFamily: 'Roboto',
     fontSize: 14,
     fontWeight: FontWeight.w400,
-    color: Color(0xff4B84F4),
+    color: CalendarColors.txtBlue,
     height: 1.17,
   );
 
@@ -37,5 +37,11 @@ class CalendarTextStyles {
     fontWeight: FontWeight.w600,
     color: CalendarColors.txtBlue,
     height: 1.32,
+  );
+  static const TextStyle fSize15Weight400 = TextStyle(
+    fontFamily: 'Roboto',
+    color: Colors.white,
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
   );
 }

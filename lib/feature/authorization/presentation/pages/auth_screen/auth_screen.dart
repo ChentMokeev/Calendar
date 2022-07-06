@@ -24,7 +24,7 @@ class AuthScreen extends StatelessWidget {
       child: ChangeNotifierProvider(
         create: (context) => RegistrationProvider(),
         child: Scaffold(
-          backgroundColor: CalendarColors.bgBlue,
+          backgroundColor: CalendarColors.authBgBlue,
           body: Stack(
             children: [
               Align(
