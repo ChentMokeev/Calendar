@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../text_field_provider/login_provider.dart';
-import '../../text_field_provider/registration_provider.dart';
+import '../../../../../utils/login_provider.dart';
+import '../../../../../utils/registration_provider.dart';
 import '../../../../../resouces/calendar_colors.dart';
 import '../../../../../resouces/calendar_text_styles.dart';
 import '../../widgets/add_image.dart';

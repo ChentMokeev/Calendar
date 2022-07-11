@@ -55,3 +55,26 @@ String getWeekdayRu(int weekday) {
   ];
   return days[weekday - 1];
 }
+
+String getMonthsRu(int month) {
+  List<String> months = [
+    'Январь',
+    'Февраль',
+    'Март',
+    'Апрель',
+    'Май',
+    'Июнь',
+    'Июль',
+    'Август',
+    'Сентябрь',
+    'Октябрь',
+    'Ноябрь',
+    'Декабрь',
+  ];
+  return months[month - 1];
+}
+
+const Map<CalendarFormat, String> kAvailableCalendarFormats = {
+  CalendarFormat.month: 'Month',
+  CalendarFormat.week: 'Week'
+};

@@ -24,8 +24,8 @@ class _MyCalendarWidgetState extends State<MyCalendarWidget> {
       calendarBuilders: CalendarBuilders(
         headerTitleBuilder: (context, time) => Column(
           children: [
-            const Text(
-              'Сегодня',
+            Text(
+              time == DateTime.now() ? 'Сегодня' : getMonthsRu(time.month),
               style: CalendarTextStyles.fSize16Weight600White,
             ),
             Text(
@@ -41,32 +41,12 @@ class _MyCalendarWidgetState extends State<MyCalendarWidget> {
           style: const TextStyle(color: Color(0x88ffffff)),
         ),
       ),
-      availableCalendarFormats: const {
-        CalendarFormat.month: 'Month',
-        CalendarFormat.week: 'Week'
-      },
+      availableCalendarFormats: kAvailableCalendarFormats,
       // Calendar Style
-      calendarStyle: const CalendarStyle(
-        defaultTextStyle: TextStyle(color: Colors.white, fontSize: 16),
-        weekendTextStyle: TextStyle(color: Colors.white, fontSize: 16),
-        todayDecoration: BoxDecoration(
-          color: Color(0xff1E4BA4),
-          shape: BoxShape.circle,
-        ),
-      ),
+      calendarStyle: CalendarWidgetStyles.calendarStyle,
 
       // Header Style
-      headerStyle: const HeaderStyle(
-        titleCentered: true,
-        formatButtonVisible: false,
-        titleTextStyle: TextStyle(
-          color: Colors.white,
-        ),
-        decoration: BoxDecoration(color: Color(0xff4B84F4)),
-        leftChevronIcon: Icon(Icons.chevron_left, color: Colors.white),
-        rightChevronIcon: Icon(Icons.chevron_right, color: Colors.white),
-      ),
-
+      headerStyle: CalendarWidgetStyles.calendarHeaderStyle,
       // Functions
       selectedDayPredicate: (day) {
         return isSameDay(_selectedDay, day);
