@@ -44,4 +44,11 @@ class CalendarTextStyles {
     fontSize: 15,
     fontWeight: FontWeight.w400,
   );
+
+  static const TextStyle fSize18Weight600 = TextStyle(
+    fontFamily: "Inter",
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    height: 1.21,
+  );
 }

@@ -9,6 +9,7 @@ part '../widgets/my_calendar_widget.dart';
 part '../widgets/event_card.dart';
 part '../widgets/my_bottom_nav_bar.dart';
 part '../widgets/my_floating_act_btn.dart';
+part '../widgets/add_event_bottom_sheet.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -30,9 +31,8 @@ class MainScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 16),
                 decoration: const BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30),
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(30),
                   ),
                 ),
                 child: ListView.separated(
