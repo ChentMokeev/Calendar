@@ -3,7 +3,12 @@ part of '../pages/main_screen.dart';
 class MyBottomNavBar extends StatelessWidget {
   const MyBottomNavBar({
     Key? key,
+    // required this.index,
+    // required this.onTap,
   }) : super(key: key);
+
+  // final int index;
+  // final Function() onTap;
 
   @override
   Widget build(BuildContext context) {

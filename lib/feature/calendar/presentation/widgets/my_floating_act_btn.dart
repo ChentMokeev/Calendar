@@ -15,6 +15,7 @@ class MyFloatingActBtn extends StatelessWidget {
           context: context,
           builder: (context) => const AddEventBottomSheet(),
           isScrollControlled: true,
+          useRootNavigator: true,
           enableDrag: false,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(top: Radius.circular(30)),

@@ -4,12 +4,12 @@ import '../../../../resouces/calendar_colors.dart';
 import '../../../../resouces/calendar_text_styles.dart';
 import '../../../../resouces/calendar_widget_styles.dart';
 import '../../../../utils/utils.dart';
+import '../../../add_event/presentation/pages/add_event_bottom_sheet.dart';
 
 part '../widgets/my_calendar_widget.dart';
 part '../widgets/event_card.dart';
 part '../widgets/my_bottom_nav_bar.dart';
 part '../widgets/my_floating_act_btn.dart';
-part '../widgets/add_event_bottom_sheet.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: CalendarColors.txtBlue,
         floatingActionButton: const MyFloatingActBtn(),
-        bottomNavigationBar: const MyBottomNavBar(),
+        // bottomNavigationBar: const MyBottomNavBar(),
         body: Column(
           children: [
             const MyCalendarWidget(),
