@@ -1,10 +1,52 @@
 import 'package:flutter/material.dart';
+import 'package:test_calendar/feature/add_event/presentation/widgets/save_button.dart';
 
 class MembersBottomSheet extends StatelessWidget {
   const MembersBottomSheet({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(title: const Text('Участники')),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            const TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                ),
+                prefixIcon: Icon(Icons.search),
+              ),
+            ),
+            const SizedBox(height: 16),
+            Expanded(
+              // height: MediaQuery.of(context).size.height / 2,
+              child: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (context, index) => const ListTile(
+                  leading: CircleAvatar(),
+                  title: Text('John Doe'),
+                  subtitle: Text('Java Enjoyer'),
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 16),
+              child: Text(
+                'Выберите участников',
+                style: TextStyle(
+                  height: 2.857,
+                  fontSize: 14,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            const SaveButton(),
+          ],
+        ),
+      ),
+    );
   }
 }

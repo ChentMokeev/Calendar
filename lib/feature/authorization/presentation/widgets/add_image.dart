@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_calendar/resouces/calendar_colors.dart';
 
-import '../../../../resouces/calendar_text_styles.dart';
+import 'package:test_calendar/resouces/calendar_text_styles.dart';
 
 class AddImage extends StatelessWidget {
   const AddImage({

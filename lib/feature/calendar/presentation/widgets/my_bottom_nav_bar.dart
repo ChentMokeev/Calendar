@@ -19,8 +19,12 @@ class MyBottomNavBar extends StatelessWidget {
         BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Календарь'),
         BottomNavigationBarItem(
             icon: Icon(Icons.notifications_outlined), label: 'Сообщения'),
-        BottomNavigationBarItem(icon: Icon(Icons.search_outlined), label: 'Поиск'),
-        BottomNavigationBarItem(icon: Icon(Icons.person_outlined), label: 'Профиль'),
+        BottomNavigationBarItem(
+            icon: Icon(Icons.search_outlined), label: 'Поиск'),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.person_outlined),
+          label: 'Профиль',
+        ),
       ],
     );
   }

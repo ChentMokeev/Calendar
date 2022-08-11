@@ -9,7 +9,7 @@ class DefaultSelector extends StatelessWidget {
     this.mark,
   }) : super(key: key);
 
-  final IconData icon;
+  final Widget icon;
   final String title;
   final String? mark;
   final Function() onTap;
@@ -18,7 +18,7 @@ class DefaultSelector extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       horizontalTitleGap: 0,
-      leading: Icon(icon, color: Colors.blue),
+      leading: icon,
       title: Row(
         children: [
           Text(title),
@@ -26,11 +26,8 @@ class DefaultSelector extends StatelessWidget {
           if (mark != null) Text(mark!),
         ],
       ),
-      trailing: IconButton(
-        icon: const Icon(Icons.arrow_forward_ios),
-        onPressed: onTap,
-      ),
-      // onTap: onTap,
+      trailing: const Icon(Icons.arrow_forward_ios),
+      onTap: onTap,
     );
   }
 }

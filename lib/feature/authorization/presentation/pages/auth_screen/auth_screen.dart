@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../../../utils/login_provider.dart';
-import '../../../../../utils/registration_provider.dart';
-import '../../../../../resouces/calendar_colors.dart';
-import '../../../../../resouces/calendar_text_styles.dart';
-import '../../widgets/add_image.dart';
-import '../../widgets/login_button.dart';
+import 'package:test_calendar/feature/authorization/presentation/widgets/add_image.dart';
+import 'package:test_calendar/feature/authorization/presentation/widgets/login_button.dart';
+import 'package:test_calendar/resouces/calendar_colors.dart';
+import 'package:test_calendar/resouces/calendar_text_styles.dart';
+import 'package:test_calendar/utils/login_provider.dart';
+import 'package:test_calendar/utils/registration_provider.dart';
 
 part '../../widgets/default_text_field.dart';
-part '../../widgets/registration_form.dart';
 part '../../widgets/login_form.dart';
+part '../../widgets/registration_form.dart';
 
 class AuthScreen extends StatelessWidget {
   AuthScreen({Key? key}) : super(key: key);

@@ -46,7 +46,7 @@ class CalendarTextStyles {
   );
 
   static const TextStyle fSize18Weight600 = TextStyle(
-    fontFamily: "Inter",
+    fontFamily: 'Inter',
     fontSize: 18,
     fontWeight: FontWeight.w600,
     height: 1.21,

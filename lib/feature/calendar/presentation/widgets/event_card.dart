@@ -33,7 +33,7 @@ class EventCard extends StatelessWidget {
                 bottomLeft: Radius.circular(12),
               ),
             ),
-            width: 12,
+            width: screenSize.width * .0333,
           ),
           const SizedBox(width: 8),
           Expanded(

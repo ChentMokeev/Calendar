@@ -44,7 +44,7 @@ final kFirstDay = DateTime(kToday.year, kToday.month - 3, kToday.day);
 final kLastDay = DateTime(kToday.year, kToday.month + 3, kToday.day);
 
 String getWeekdayRu(int weekday) {
-  List<String> days = [
+  final days = [
     'Пн',
     'Вт',
     'Ср',
@@ -57,7 +57,7 @@ String getWeekdayRu(int weekday) {
 }
 
 String getMonthsRu(int month) {
-  List<String> months = [
+  final months = [
     'Январь',
     'Февраль',
     'Март',
@@ -78,3 +78,10 @@ const Map<CalendarFormat, String> kAvailableCalendarFormats = {
   CalendarFormat.month: 'Month',
   CalendarFormat.week: 'Week'
 };
+
+const List<String> namesOfMarks = [
+  'Рабочий',
+  'Личный',
+  'Мероприятия',
+  'Проекты',
+];

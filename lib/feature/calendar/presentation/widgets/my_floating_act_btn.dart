@@ -20,6 +20,7 @@ class MyFloatingActBtn extends StatelessWidget {
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
           ),
+          backgroundColor: Colors.white,
         );
       },
     );
