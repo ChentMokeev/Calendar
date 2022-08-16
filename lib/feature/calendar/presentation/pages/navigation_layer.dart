@@ -11,9 +11,8 @@ class NavigationLayer extends StatefulWidget {
 class _NavigationLayerState extends State<NavigationLayer> {
   @override
   Widget build(BuildContext context) {
-    return 
-    
-    AutoTabsRouter.pageView(
+    return AutoTabsRouter.pageView(
+      homeIndex: 0,
       routes: const [
         Calendar(),
         Messages(),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_calendar/feature/add_event/presentation/widgets/save_button.dart';
+import 'package:test_calendar/feature/search/presentation/widgets/search_bar.dart';
 
 class MembersBottomSheet extends StatelessWidget {
   const MembersBottomSheet({Key? key}) : super(key: key);
@@ -12,14 +13,7 @@ class MembersBottomSheet extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            const TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                ),
-                prefixIcon: Icon(Icons.search),
-              ),
-            ),
+            const SearchBar(),
             const SizedBox(height: 16),
             Expanded(
               // height: MediaQuery.of(context).size.height / 2,

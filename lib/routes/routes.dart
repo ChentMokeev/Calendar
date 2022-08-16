@@ -7,6 +7,7 @@ import 'package:test_calendar/feature/add_event/presentation/pages/privacy_botto
 import 'package:test_calendar/feature/add_event/presentation/pages/repeat_bottom_sheet.dart';
 import 'package:test_calendar/feature/calendar/presentation/pages/main_screen.dart';
 import 'package:test_calendar/feature/calendar/presentation/pages/navigation_layer.dart';
+import 'package:test_calendar/utils/plug_in_screen.dart';
 
 export 'package:auto_route/auto_route.dart';
 
@@ -15,11 +16,11 @@ export 'routes.gr.dart';
 @MaterialAutoRouter(
   routes: <AutoRoute>[
     AutoRoute<String>(
+      initial: true,
       page: NavigationLayer,
       path: '/',
       children: [
         AutoRoute(
-          initial: true,
           page: EmptyRouterPage,
           path: 'calendar',
           name: 'Calendar',
@@ -56,21 +57,36 @@ export 'routes.gr.dart';
         ),
         AutoRoute(
           page: EmptyRouterPage,
-          path: '',
+          path: 'search',
           name: 'Search',
-          children: [],
+          children: [
+            AutoRoute(
+              path: '',
+              page: PlugIn,
+            )
+          ],
         ),
         AutoRoute(
           page: EmptyRouterPage,
-          path: '',
+          path: 'messages',
           name: 'Messages',
-          children: [],
+          children: [
+            AutoRoute(
+              path: '',
+              page: PlugIn,
+            )
+          ],
         ),
         AutoRoute(
           page: EmptyRouterPage,
-          path: '',
+          path: 'profile',
           name: 'Profile',
-          children: [],
+          children: [
+            AutoRoute(
+              path: '',
+              page: PlugIn,
+            )
+          ],
         ),
       ],
     )

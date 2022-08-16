@@ -1,4 +1,3 @@
-// import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:test_calendar/feature/add_event/presentation/pages/add_event_bottom_sheet.dart';
@@ -8,7 +7,6 @@ import 'package:test_calendar/resouces/calendar_widget_styles.dart';
 import 'package:test_calendar/utils/utils.dart';
 
 part '../widgets/event_card.dart';
-part '../widgets/my_bottom_nav_bar.dart';
 part '../widgets/my_calendar_widget.dart';
 part '../widgets/my_floating_act_btn.dart';
 
@@ -23,7 +21,6 @@ class MainScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: CalendarColors.txtBlue,
         floatingActionButton: const MyFloatingActBtn(),
-        // bottomNavigationBar: const MyBottomNavBar(),
         body: Column(
           children: [
             const MyCalendarWidget(),
