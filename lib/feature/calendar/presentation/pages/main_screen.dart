@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:test_calendar/feature/add_event/presentation/pages/add_event_bottom_sheet.dart';
+import 'package:test_calendar/l10n/generated/l10n.dart';
 import 'package:test_calendar/resouces/calendar_colors.dart';
 import 'package:test_calendar/resouces/calendar_text_styles.dart';
 import 'package:test_calendar/resouces/calendar_widget_styles.dart';

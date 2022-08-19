@@ -25,7 +25,9 @@ class _MyCalendarWidgetState extends State<MyCalendarWidget> {
         headerTitleBuilder: (context, time) => Column(
           children: [
             Text(
-              time == DateTime.now() ? 'Сегодня' : getMonthsRu(time.month),
+              time == DateTime.now()
+                  ? L10n.of(context).today
+                  : getMonthsRu(time.month),
               style: CalendarTextStyles.fSize16Weight600White,
             ),
             Text(

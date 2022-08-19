@@ -78,10 +78,3 @@ const Map<CalendarFormat, String> kAvailableCalendarFormats = {
   CalendarFormat.month: 'Month',
   CalendarFormat.week: 'Week'
 };
-
-const List<String> namesOfMarks = [
-  'Рабочий',
-  'Личный',
-  'Мероприятия',
-  'Проекты',
-];

@@ -7,44 +7,45 @@ class RegistrationForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = L10n.of(context);
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
       children: [
         const AddImage(),
         DefaultTextField(
-          label: 'ФИО',
+          label: locale.name,
           controller: Provider.of<RegistrationProvider>(context).nameController,
         ),
         DefaultTextField(
-          label: 'Отдел',
+          label: locale.department,
           controller:
               Provider.of<RegistrationProvider>(context).departmentController,
         ),
         DefaultTextField(
-          label: 'Должность',
+          label: locale.position,
           controller:
               Provider.of<RegistrationProvider>(context).positionController,
         ),
         DefaultTextField(
-          label: 'Почта',
+          label: locale.email,
           controller: Provider.of<RegistrationProvider>(context).mailController,
         ),
         DefaultTextField(
-          label: 'Пароль',
+          label: locale.password,
           controller:
               Provider.of<RegistrationProvider>(context).passwordController,
         ),
         const SizedBox(height: 16),
-        const LoginButton(title: 'Зарегистрироваться'),
+        LoginButton(title: locale.signUp),
         const SizedBox(height: 16),
         Row(
           children: [
-            const Text('У вас уже есть Аккаунт?\t',
+            Text('${locale.haveAcc}\t',
                 style: CalendarTextStyles.fSize14Weight300Gray),
             InkWell(
               onTap: onTap,
               child: Text(
-                'Войти',
+                locale.signIn,
                 style: CalendarTextStyles.fSize14Weight300Gray
                     .copyWith(color: CalendarColors.authBgBlue),
               ),

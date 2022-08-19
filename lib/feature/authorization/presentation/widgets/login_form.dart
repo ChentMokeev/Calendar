@@ -7,21 +7,22 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = L10n.of(context);
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
       children: [
-        const Text(
-          'Вход',
+        Text(
+          locale.enter,
           style: CalendarTextStyles.fSize16Weight600Blue,
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 8),
         DefaultTextField(
-          label: 'Логин',
+          label: locale.login,
           controller: Provider.of<LoginProvider>(context).loginController,
         ),
         DefaultTextField(
-          label: 'Пароль',
+          label: locale.password,
           hideText: true,
           controller: Provider.of<LoginProvider>(context).passwordController,
         ),
@@ -36,12 +37,12 @@ class LoginForm extends StatelessWidget {
         SizedBox(
           height: 48,
           child: LoginButton(
-            title: 'Войти',
+            title: locale.signIn,
             onPress: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
+                SnackBar(
                   content: Text(
-                    'Неправильно ввели данные',
+                    locale.invalidData,
                     style: CalendarTextStyles.fSize16Weight600White,
                     textAlign: TextAlign.center,
                   ),
@@ -53,12 +54,12 @@ class LoginForm extends StatelessWidget {
         ),
         Row(
           children: [
-            const Text('У вас нет Аккаунта?\t',
+            Text('${locale.haveNoAcc}\t',
                 style: CalendarTextStyles.fSize14Weight300Gray),
             InkWell(
               onTap: onTap,
               child: Text(
-                'Регистрация',
+                locale.signUp,
                 style: CalendarTextStyles.fSize14Weight300Gray
                     .copyWith(color: CalendarColors.authBgBlue),
               ),

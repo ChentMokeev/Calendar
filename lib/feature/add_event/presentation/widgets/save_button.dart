@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:test_calendar/l10n/generated/l10n.dart';
 
 class SaveButton extends StatelessWidget {
   const SaveButton({
     Key? key,
   }) : super(key: key);
-
-  
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +13,7 @@ class SaveButton extends StatelessWidget {
       width: screenSize.width,
       height: screenSize.height * .075,
       child: ElevatedButton(
-        child: const Text('Сохранить'),
+        child: Text(L10n.of(context).save),
         onPressed: () {},
       ),
     );

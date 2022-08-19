@@ -50,7 +50,7 @@ class MobileAppRouter extends _i11.RootStackRouter {
     },
     Messages.name: (routeData) {
       return _i11.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i2.EmptyRouterScreen());
+          routeData: routeData, child: const _i2.EmptyRouterPage());
     },
     Profile.name: (routeData) {
       return _i11.MaterialPageX<dynamic>(
@@ -120,7 +120,12 @@ class MobileAppRouter extends _i11.RootStackRouter {
                     path: '', parent: Search.name)
               ]),
           _i11.RouteConfig(Messages.name,
-              path: 'messages', parent: NavigationLayerRoute.name),
+              path: 'messages',
+              parent: NavigationLayerRoute.name,
+              children: [
+                _i11.RouteConfig(PlugInRoute.name,
+                    path: '', parent: Messages.name)
+              ]),
           _i11.RouteConfig(Profile.name,
               path: 'profile',
               parent: NavigationLayerRoute.name,
@@ -160,9 +165,10 @@ class Search extends _i11.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.EmptyRouterScreen]
+/// [_i2.EmptyRouterPage]
 class Messages extends _i11.PageRouteInfo<void> {
-  const Messages() : super(Messages.name, path: 'messages');
+  const Messages({List<_i11.PageRouteInfo>? children})
+      : super(Messages.name, path: 'messages', initialChildren: children);
 
   static const String name = 'Messages';
 }

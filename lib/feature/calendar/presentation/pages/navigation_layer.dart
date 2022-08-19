@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_calendar/l10n/generated/l10n.dart';
 import 'package:test_calendar/routes/routes.dart';
 
 class NavigationLayer extends StatefulWidget {
@@ -11,6 +12,7 @@ class NavigationLayer extends StatefulWidget {
 class _NavigationLayerState extends State<NavigationLayer> {
   @override
   Widget build(BuildContext context) {
+    final locale = L10n.of(context);
     return AutoTabsRouter.pageView(
       homeIndex: 0,
       routes: const [
@@ -27,15 +29,19 @@ class _NavigationLayerState extends State<NavigationLayer> {
             onTap: context.tabsRouter.setActiveIndex,
             unselectedItemColor: Colors.grey,
             selectedItemColor: Colors.grey,
-            items: const [
+            items: [
               BottomNavigationBarItem(
-                  icon: Icon(Icons.add), label: 'Календарь'),
+                  icon: const Icon(Icons.add), label: locale.calendar),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.notifications_outlined), label: 'Сообщения'),
+                icon: const Icon(Icons.notifications_outlined),
+                label: locale.messages,
+              ),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.search_outlined), label: 'Поиск'),
+                  icon: const Icon(Icons.search_outlined),
+                  label: locale.search),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.person_outlined), label: 'Профиль'),
+                  icon: const Icon(Icons.person_outlined),
+                  label: locale.profile),
             ],
           ),
         );

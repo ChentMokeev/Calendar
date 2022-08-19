@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:test_calendar/feature/authorization/presentation/widgets/add_image.dart';
 import 'package:test_calendar/feature/authorization/presentation/widgets/login_button.dart';
+import 'package:test_calendar/l10n/generated/l10n.dart';
 import 'package:test_calendar/resouces/calendar_colors.dart';
 import 'package:test_calendar/resouces/calendar_text_styles.dart';
 import 'package:test_calendar/utils/login_provider.dart';

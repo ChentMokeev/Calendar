@@ -11,22 +11,33 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  flutter_localizations:
+    sdk: flutter
+    
   cupertino_icons: ^1.0.2
   flutter_bloc: ^8.0.1
   provider: ^6.0.3
   table_calendar: ^3.0.6
   auto_route: ^4.2.1
   flutter_svg: ^1.1.1+1
+  intl: ^0.17.0
+  intl_utils: ^2.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^1.0.0
-  
   auto_route_generator: ^4.2.0
   build_runner: ^2.2.0
+
+flutter_intl:
+  enabled: true
+  main_locale: "ru"
+  arb-dir: lib/l10n/intl_ru.arb
+  template-arb-file: intl_ru.arb
+  output_dir: lib/l10n/generated
+  class_name: L10n
 
 flutter:
   uses-material-design: true

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:test_calendar/l10n/generated/l10n.dart';
 import 'package:test_calendar/resouces/calendar_text_styles.dart';
 import 'package:test_calendar/routes/routes.dart';
 import 'package:test_calendar/routes/routes.gr.dart';
@@ -26,6 +28,13 @@ class MyApp extends StatelessWidget {
       routerDelegate: appRouter.delegate(),
       routeInformationProvider: appRouter.routeInfoProvider(),
       debugShowCheckedModeBanner: false,
+      supportedLocales: L10n.delegate.supportedLocales,
+      localizationsDelegates: const [
+        L10n.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
     );
   }
 }

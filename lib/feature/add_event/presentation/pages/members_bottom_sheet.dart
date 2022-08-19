@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_calendar/feature/add_event/presentation/widgets/save_button.dart';
 import 'package:test_calendar/feature/search/presentation/widgets/search_bar.dart';
+import 'package:test_calendar/l10n/generated/l10n.dart';
 
 class MembersBottomSheet extends StatelessWidget {
   const MembersBottomSheet({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class MembersBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Участники')),
+      appBar: AppBar(title: Text(L10n.of(context).members)),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(

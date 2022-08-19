@@ -15,7 +15,7 @@ class MembersSelector extends StatelessWidget {
         ListTile(
           horizontalTitleGap: 0,
           leading: const Icon(Icons.person_outline, color: Colors.blue),
-          title: const Text('Участники'),
+          title: Text(L10n.of(context).members),
           trailing: SizedBox(
             height: 32,
             width: 32,
