@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_calendar/feature/add_event/presentation/widgets/save_button.dart';
-import 'package:test_calendar/feature/search/presentation/widgets/search_bar.dart';
+import 'package:test_calendar/feature/search/presentation/pages/search_page.dart';
 import 'package:test_calendar/l10n/generated/l10n.dart';
 
 class MembersBottomSheet extends StatelessWidget {
