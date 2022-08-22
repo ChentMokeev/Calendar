@@ -14,7 +14,7 @@ class _NavigationLayerState extends State<NavigationLayer> {
   Widget build(BuildContext context) {
     final locale = L10n.of(context);
     return AutoTabsRouter.pageView(
-      homeIndex: 0,
+      homeIndex: 2,
       routes: const [
         Calendar(),
         Messages(),

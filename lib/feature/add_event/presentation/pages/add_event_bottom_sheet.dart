@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:test_calendar/core/locale.dart';
 import 'package:test_calendar/feature/add_event/presentation/pages/location_bottom_sheet.dart';
 import 'package:test_calendar/feature/add_event/presentation/pages/marks_bottom_sheet.dart';
 import 'package:test_calendar/feature/add_event/presentation/pages/members_bottom_sheet.dart';
 import 'package:test_calendar/feature/add_event/presentation/pages/privacy_bottom_sheet.dart';
+import 'package:test_calendar/feature/add_event/presentation/pages/repeat_bottom_sheet.dart';
 import 'package:test_calendar/feature/add_event/presentation/widgets/save_button.dart';
 import 'package:test_calendar/l10n/generated/l10n.dart';
 import 'package:test_calendar/resouces/calendar_text_styles.dart';
-import 'package:test_calendar/routes/routes.dart';
 
 part '../widgets/default_selector.dart';
 part '../widgets/member_selector.dart';
@@ -20,9 +21,8 @@ class AddEventBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
     return SizedBox(
-      height: screenSize.height * 0.9625,
+      height: context.height * 0.9625,
       child: ClipRRect(
         borderRadius: const BorderRadius.vertical(top: Radius.circular(30)),
         child: Navigator(
@@ -47,8 +47,6 @@ class ListOfSelectors extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final locale = L10n.of(context);
-    // final screenSize = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -65,24 +63,29 @@ class ListOfSelectors extends StatelessWidget {
             ],
           ),
           Text(
-            locale.newMeeting,
+            context.locale.newMeeting,
             style: CalendarTextStyles.fSize18Weight600,
             textAlign: TextAlign.center,
           ),
           TextField(
             decoration: InputDecoration(
                 contentPadding: const EdgeInsets.only(left: 48),
-                hintText: locale.nameing,
+                hintText: context.locale.nameing,
                 border: InputBorder.none),
           ),
           myDevider(),
           const TimeSelector(),
           myDevider(),
           DefaultSelector(
-            icon: SvgPicture.asset('assets/svg/Repeat.svg'),
-            title: locale.repeating,
-            onTap: () => context.router.push(const RepeatBottomSheetRoute()),
-          ),
+              icon: SvgPicture.asset('assets/svg/Repeat.svg'),
+              title: context.locale.repeating,
+              onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const RepeatBottomSheet(),
+              ),
+            ),
+              ),
           myDevider(),
           MembersSelector(
             onPress: () => Navigator.push(
@@ -95,7 +98,7 @@ class ListOfSelectors extends StatelessWidget {
           myDevider(),
           DefaultSelector(
             icon: SvgPicture.asset('assets/svg/Location.svg'),
-            title: locale.location,
+            title: context.locale.location,
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
@@ -106,7 +109,7 @@ class ListOfSelectors extends StatelessWidget {
           myDevider(),
           DefaultSelector(
             icon: SvgPicture.asset('assets/svg/Hash.svg'),
-            title: locale.myMarks,
+            title: context.locale.myMarks,
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
@@ -117,7 +120,7 @@ class ListOfSelectors extends StatelessWidget {
           myDevider(),
           DefaultSelector(
             icon: SvgPicture.asset('assets/svg/Lock.svg'),
-            title: locale.privacy,
+            title: context.locale.privacy,
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
