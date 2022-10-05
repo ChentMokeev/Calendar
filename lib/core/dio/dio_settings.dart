@@ -5,9 +5,10 @@ class DioSettings {
   DioSettings() {
     setup();
   }
-  Dio dio = Dio(
+  final Dio dio = Dio(
     BaseOptions(
-      baseUrl: '',
+      baseUrl: 'https://megalab-app.herokuapp.com/api/v1',
+      contentType: 'application/json',
     ),
   );
 

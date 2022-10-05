@@ -1,17 +1,21 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:test_calendar/feature/calendar/presentation/pages/main_screen.dart';
-import 'package:test_calendar/feature/calendar/presentation/pages/navigation_layer.dart';
-import 'package:test_calendar/feature/search/presentation/pages/search_page.dart';
-import 'package:test_calendar/utils/plug_in_screen.dart';
+import 'package:test_calendar/feature/presentation/screens/calendar/calendar_screen.dart';
+import 'package:test_calendar/feature/presentation/screens/edit_profile/reduct_profile_page.dart';
+import 'package:test_calendar/feature/presentation/screens/meeting_info/meeting_message_page.dart';
+import 'package:test_calendar/feature/presentation/screens/messages/messages_page.dart';
+import 'package:test_calendar/feature/presentation/screens/navigation/navigation_layer.dart';
+import 'package:test_calendar/feature/presentation/screens/profile/profile_page.dart';
+import 'package:test_calendar/feature/presentation/screens/search/search_page.dart';
 
 export 'package:auto_route/auto_route.dart';
 
 export 'routes.gr.dart';
 
-@MaterialAutoRouter(
+@CustomAutoRouter(
+  replaceInRouteName: 'Page,Screen,Route',
+  transitionsBuilder: TransitionsBuilders.slideLeft,
   routes: <AutoRoute>[
     AutoRoute<String>(
-      initial: true,
       page: NavigationLayer,
       path: '/',
       children: [
@@ -19,11 +23,16 @@ export 'routes.gr.dart';
           page: EmptyRouterPage,
           path: 'calendar',
           name: 'Calendar',
+          initial: true,
           children: [
-            AutoRoute(
+            CustomRoute(
               path: '',
-              page: MainScreen,
+              page: CalendarScreen,
             ),
+            AutoRoute(
+              page: MeetingMessagePage,
+              path: 'meeting_info',
+            )
           ],
         ),
         AutoRoute(
@@ -34,6 +43,15 @@ export 'routes.gr.dart';
             AutoRoute(
               path: '',
               page: SearchPage,
+            ),
+            AutoRoute(
+              page: MeetingMessagePage,
+              path: 'meeting_info',
+            ),
+            AutoRoute(
+              page: CalendarScreen,
+              path: 'calendar_of',
+              name: 'calendar_of',
             )
           ],
         ),
@@ -44,8 +62,12 @@ export 'routes.gr.dart';
           children: [
             AutoRoute(
               path: '',
-              page: PlugIn,
-            )
+              page: MessagesPage,
+            ),
+            AutoRoute(
+              page: MeetingMessagePage,
+              path: 'meeting_info',
+            ),
           ],
         ),
         AutoRoute(
@@ -55,8 +77,12 @@ export 'routes.gr.dart';
           children: [
             AutoRoute(
               path: '',
-              page: PlugIn,
-            )
+              page: ProfilePage,
+            ),
+            AutoRoute(
+              page: ReductProfilePage,
+              path: 'edit_profile',
+            ),
           ],
         ),
       ],
